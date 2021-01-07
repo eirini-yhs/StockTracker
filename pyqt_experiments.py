@@ -25,18 +25,18 @@ class App(QMainWindow):
 
         self.show()
 
-def build_menu(self):
-    menu_bar = self.menuBar()
-    menu_bar.setNativeMenuBar(False)
-    file_menu = menu_bar.addMEnu("File")
-    menu_bar.addMEnu("Edit")
-    menu_bar.addMEnu("Help")
+    def build_menu(self):
+        menu_bar = self.menuBar()
+        menu_bar.setNativeMenuBar(False)
+        file_menu = menu_bar.addMenu("File")
+        menu_bar.addMenu("Edit")
+        menu_bar.addMenu("Help")
 
-    exit_button = QAction(QIcon('exit24.png'), 'Quit', self)
-    exit_button.setShortcut("Ctrl+Q")
-    exit_button.setStatusTip("Exit application")
-    exit_button.triggered.connect(self.close)
-    file_menu.addAction(exit_button)
+        exit_button = QAction(QIcon('exit24.png'), 'Quit', self)
+        exit_button.setShortcut("Ctrl+Q")
+        exit_button.setStatusTip("Exit application")
+        exit_button.triggered.connect(self.close)
+        file_menu.addAction(exit_button)
 
 if __name__=='__main__':
     app=QApplication(sys.argv)
